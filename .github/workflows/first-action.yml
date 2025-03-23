@@ -1,0 +1,18 @@
+# It defines the name of the workflow
+name: First Workflow
+
+# This command defines the event / events that will trigger the workflow
+# In this example, this is an event that manually starts the workflow
+on: workflow_dispatch
+
+# Here you define the jobs. You need to hit the TAB button to put the job name UNDER the "jobs:" field
+# Just like the "jobs" field, the job definition field "first-job" needs a TAB in order to put under it the commands. 
+# The "first-job" name has been defined by the users.. the rest are reserved identifiers (e.g.,  name, on, jobs, runs-on ..)
+jobs:   
+  first-job:
+    runs-on:  ubuntu-latest
+    steps: 
+      - name: Print Greeting
+        run: echo "Hey World!"
+      - name: Print Goodbye
+        run: echo "Done - bye!"
